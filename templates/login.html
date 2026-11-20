@@ -1,0 +1,49 @@
+
+{% extends "maestra.html" %}
+
+{% block titulo %}Iniciar sesión{% endblock %}
+
+{% block contenido %}
+<section class="section">
+    <div class="container">
+        <h1 class="title">Iniciar sesión</h1>
+
+        {% with mensajes = get_flashed_messages() %}
+            {% for mensaje in mensajes %}
+                <p class="has-text-success mb-4">{{ mensaje }}</p>
+            {% endfor %}
+        {% endwith %}
+
+        <form method="POST" action="{{ url_for('auth.login') }}">
+            {{ form.hidden_tag() }}
+
+            <div class="field">
+                <label class="label">Usuario</label>
+                <div class="control">
+                    {{ form.username(class="input") }}
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Contraseña</label>
+                <div class="control">
+                    {{ form.password(class="input") }}
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="checkbox">
+                    {{ form.remember_me() }}
+                    Recordarme
+                </label>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    {{ form.submit(class="button is-primary") }}
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}

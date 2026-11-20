@@ -1,0 +1,15 @@
+test_agregar_juego (test_api.TestAPI.test_agregar_juego) ... ok
+test_eliminar_juego (test_api.TestAPI.test_eliminar_juego) ... ok
+test_modificar_juego (test_api.TestAPI.test_modificar_juego) ... ok
+test_obtener_juego (test_api.TestAPI.test_obtener_juego) ... ok
+test_obtener_juegos (test_api.TestAPI.test_obtener_juegos) ... ok
+test_crear_juego (test_models.TestModels.test_crear_juego) ... ok
+test_crear_usuario (test_models.TestModels.test_crear_usuario) ... ok
+test_juegos_sin_login (test_routes.TestRoutes.test_juegos_sin_login) ... ok
+test_login (test_routes.TestRoutes.test_login) ... ok
+test_logout_sin_login (test_routes.TestRoutes.test_logout_sin_login) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 2.160s
+
+OK

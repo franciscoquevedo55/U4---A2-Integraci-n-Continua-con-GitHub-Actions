@@ -1,0 +1,20 @@
+{% extends "maestra.html" %}
+
+{% block titulo %}Error 404{% endblock %}
+
+{% block contenido %}
+<section class="section">
+    <div class="container has-text-centered">
+        <h1 class="title has-text-danger">Error 404</h1>
+        <h2 class="subtitle">Página no encontrada</h2>
+
+        <p>Lo sentimos, la página que estás buscando no existe o no está disponible.</p>
+
+        <br>
+
+        <a href="{{ url_for('juegos') }}" class="button is-warning">
+            Volver a videojuegos
+        </a>
+    </div>
+</section>
+{% endblock %}

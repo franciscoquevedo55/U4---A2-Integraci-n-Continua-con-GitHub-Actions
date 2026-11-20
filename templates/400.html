@@ -1,0 +1,20 @@
+{% extends "maestra.html" %}
+
+{% block titulo %}Error 400{% endblock %}
+
+{% block contenido %}
+<section class="section">
+    <div class="container has-text-centered">
+        <h1 class="title has-text-danger">Error 400</h1>
+        <h2 class="subtitle">Solicitud incorrecta</h2>
+
+        <p>La solicitud enviada no es válida o contiene datos incorrectos.</p>
+
+        <br>
+
+        <a href="{{ url_for('juegos') }}" class="button is-warning">
+            Volver a videojuegos
+        </a>
+    </div>
+</section>
+{% endblock %}

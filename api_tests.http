@@ -1,0 +1,48 @@
+
+### Obtener todos los videojuegos
+GET http://127.0.0.1:8000/api/juegos
+
+
+### Obtener un videojuego por ID
+GET http://127.0.0.1:8000/api/juegos/4
+
+
+### Agregar un videojuego
+POST http://127.0.0.1:8000/api/juegos
+Content-Type: application/json
+
+{
+    "nombre": "Juego API Prueba",
+    "descripcion": "Videojuego agregado desde la API",
+    "precio": 150
+}
+
+
+### Modificar un videojuego
+# Usar el ID del juego creado en la prueba POST
+PUT http://127.0.0.1:8000/api/juegos/10
+Content-Type: application/json
+
+{
+    "nombre": "Juego API Modificado",
+    "descripcion": "Actualizado desde la API REST",
+    "precio": 250
+}
+
+
+### Eliminar un videojuego
+# Usar el ID del juego creado en la prueba POST
+DELETE http://127.0.0.1:8000/api/juegos/10
+
+
+### Probar error 400 por datos incompletos
+POST http://127.0.0.1:8000/api/juegos
+Content-Type: application/json
+
+{
+    "nombre": "Juego incompleto"
+}
+
+
+### Probar error 404 por juego inexistente
+GET http://127.0.0.1:8000/api/juegos/99999
